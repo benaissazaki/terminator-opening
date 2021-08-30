@@ -1,4 +1,4 @@
-import { Img, useCurrentFrame, interpolate } from "remotion"
+import { Img, useCurrentFrame, interpolate, AbsoluteFill } from "remotion"
 import { Nator } from "./Nator"
 import { Term } from "./Term"
 import The from "./the.png"
@@ -11,25 +11,32 @@ export const Title = () => {
 	})
 	console.log(scale);
 	return (
-		<div
-			style={{
-				transform: `scale(${1-scale})`,
-				transformOrigin: "center",
-				width: "100%",
-				height: "100%",
-			}}
-		>
-			<Img
-				src={The}
+		<>
+			<AbsoluteFill
 				style={{
-					position: "absolute",
-					width: "750px",
-					left: "585px",
-					top: "-200px"
+					backgroundColor: "black",
 				}}
 			/>
-			<Term />
-			<Nator />
-		</div>
+			<div
+				style={{
+					transform: `scale(${1 - scale})`,
+					transformOrigin: "center",
+					width: "100%",
+					height: "100%",
+				}}
+			>
+				<Img
+					src={The}
+					style={{
+						position: "absolute",
+						width: "750px",
+						left: "585px",
+						top: "-200px"
+					}}
+				/>
+				<Term />
+				<Nator />
+			</div>
+		</>
 	)
 }
