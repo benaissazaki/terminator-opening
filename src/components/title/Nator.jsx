@@ -7,6 +7,10 @@ export const Nator = () => {
 	const marginRight = interpolate(frame, [0, 2670], [0, 8870], {
 		extrapolateRight: 'clamp',
 	})
+	const opacity = interpolate(frame, [2700, 2860], [0.8, 1], {
+		extrapolateLeft: 'clamp',
+		extrapolateRight: 'clamp'
+	})
 
 	return (
 		<Img
@@ -17,7 +21,7 @@ export const Nator = () => {
 				height: "1080px",
 				margin: 0,
 				padding: 0,
-				opacity: 0.8,
+				opacity,
 				bottom: "0",
 			}}
 		/>
