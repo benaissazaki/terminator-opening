@@ -1,23 +1,24 @@
-import { interpolate, useCurrentFrame } from "remotion"
+import { Img, interpolate, useCurrentFrame } from "remotion"
+import Termi from "./Termi.png";
 
 export const Term = () => {
 	const frame = useCurrentFrame();
-	const marginRight = interpolate(frame, [0,2670], [0, 6350], {
+	const marginRight = interpolate(frame, [0, 2670], [0, 6590], {
 		extrapolateRight: 'clamp',
-	  })
+	})
 
 	return (
-		<h1 style={{
-			position: "absolute",
-			top: '-100px',
-			left: `${1920-marginRight}px`,
-			fontSize: "1080px",
-			margin: 0,
-			padding: 0,
-			fontFamily: "terminator real nfi"
-		}}
-		>
-			TERMI
-		</h1>
+		<Img
+			src={Termi}
+			style={{
+				position: "absolute",
+				left: `${1750 - marginRight}px`,
+				height: "900px",
+				margin: 0,
+				padding: 0,
+				opacity: 0.8,
+				bottom: 0
+			}}
+		/>
 	)
 }
