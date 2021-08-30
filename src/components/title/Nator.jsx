@@ -4,7 +4,7 @@ import NatorImg from "./nator.png"
 
 export const Nator = () => {
 	const frame = useCurrentFrame();
-	const marginRight = interpolate(frame, [0, 2670], [0, 7250], {
+	const marginRight = interpolate(frame, [0, 2670], [0, 7350], {
 		extrapolateRight: 'clamp',
 	})
 
@@ -18,7 +18,7 @@ export const Nator = () => {
 				margin: 0,
 				padding: 0,
 				opacity: 0.8,
-				bottom: 0
+				bottom: "15px"
 			}}
 		/>
 	)

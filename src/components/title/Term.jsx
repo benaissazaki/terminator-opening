@@ -3,7 +3,7 @@ import Termi from "./Termi.png";
 
 export const Term = () => {
 	const frame = useCurrentFrame();
-	const marginRight = interpolate(frame, [0, 2670], [0, 6590], {
+	const marginRight = interpolate(frame, [0, 2670], [0, 6490], {
 		extrapolateRight: 'clamp',
 	})
 
