@@ -7,7 +7,7 @@ export const Nator = () => {
 	const marginRight = interpolate(frame, [0, 2670], [0, 8870], {
 		extrapolateRight: 'clamp',
 	})
-	const opacity = interpolate(frame, [2700, 2860], [0.8, 1], {
+	const opacity = interpolate(frame, [2700, 2860], [0.6, 1], {
 		extrapolateLeft: 'clamp',
 		extrapolateRight: 'clamp'
 	})
