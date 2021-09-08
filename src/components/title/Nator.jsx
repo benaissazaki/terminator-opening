@@ -4,7 +4,7 @@ import NatorImg from "./nator.png"
 
 export const Nator = () => {
 	const frame = useCurrentFrame();
-	const marginRight = interpolate(frame, [0, 2670], [0, 8870], {
+	const moveRight = interpolate(frame, [0, 2670], [0, 8870], {
 		extrapolateRight: 'clamp',
 	})
 	const opacity = interpolate(frame, [2700, 2860], [0.6, 1], {
@@ -17,7 +17,7 @@ export const Nator = () => {
 			src={NatorImg}
 			style={{
 				position: "absolute",
-				left: `${-7810 + marginRight}px`,
+				left: `${-7810 + moveRight}px`,
 				height: "1080px",
 				margin: 0,
 				padding: 0,

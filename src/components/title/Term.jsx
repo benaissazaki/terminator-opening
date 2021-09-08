@@ -3,7 +3,7 @@ import Termi from "./Termi.png";
 
 export const Term = () => {
 	const frame = useCurrentFrame();
-	const marginRight = interpolate(frame, [0, 2670], [0, 7820], {
+	const moveLeft = interpolate(frame, [0, 2670], [0, 7820], {
 		extrapolateRight: 'clamp',
 	})
 	const opacity = interpolate(frame, [2700, 2860], [0.6, 1], {
@@ -16,7 +16,7 @@ export const Term = () => {
 			src={Termi}
 			style={{
 				position: "absolute",
-				left: `${1920 - marginRight}px`,
+				left: `${1920 - moveLeft}px`,
 				height: "1080px",
 				margin: 0,
 				padding: 0,
